@@ -9,10 +9,6 @@ export default function ItemDetail({id, title, description, price, imageUrl}){
 
     const { onAddCart } = useContext(CartContext)
 
-    function onAdd(count){
-        alert(`Quiero agregar ${count} de ${title}`)
-    }
-
     return(
         <>
           <div id="itemDetail">

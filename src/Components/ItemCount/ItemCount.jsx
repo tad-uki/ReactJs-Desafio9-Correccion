@@ -2,7 +2,6 @@
 import React from "react";
 import { useState } from "react";
 import "./ItemCount.css"
-import {Link} from "react-router-dom"
 
 export default function ItemCount({ stock, initial, onAdd, id }){
     const [count, setCount] = useState(initial)
@@ -18,7 +17,6 @@ export default function ItemCount({ stock, initial, onAdd, id }){
 
     function onClicked(){
         onAdd(count, id)
-        setClicked(true)
     }
 
     return(
@@ -33,16 +31,10 @@ export default function ItemCount({ stock, initial, onAdd, id }){
                 <button className="buttonGen" onClick={subtract} disabled={count === initial}> - </button>
             </section>
 
-            {
-                clicked?
-                    <section className="finishSection">
-                        <button className="buttonFinish"> <Link to={"/cart"}> Terminar mi Compra </Link> </button>
-                    </section>
-                :
-                    <section className="finishSection">
-                        <button className="buttonFinish" onClick={onClicked}> Agregar al Carrito </button>
-                    </section>
-            }
+            <section className="finishSection">
+                <button className="buttonFinish" onClick={onClicked}> Agregar al Carrito </button>
+            </section>
+            
         </main>
     );
 }
