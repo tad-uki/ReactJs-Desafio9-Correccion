@@ -4,15 +4,17 @@ import CartWidget from "../CartWidget/CartWidget";
 import {Link} from "react-router-dom"
 import { useState } from "react";
 
+
 export default function NavBar(){
 
     const [dropdown, setDropdown] = useState([false])
+
     return (
         <nav className="navBar">
             <Link className="navLogo" to={"/"}> LimitGains™ </Link>
 
             <article className="navList">
-                <Link to={""}> 
+                <div> 
                     <span className="dropdownBtn" onClick={()=> setDropdown(!dropdown)}> Productos </span>
                     {
                         dropdown?
@@ -26,7 +28,7 @@ export default function NavBar(){
                         </div>
                     }
                     
-                </Link>
+                </div>
                 <Link to={""}> Sedes </Link>
                 <Link to={""}> Programas </Link>
             </article>

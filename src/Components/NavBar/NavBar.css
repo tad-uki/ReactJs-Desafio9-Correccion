@@ -30,8 +30,21 @@
     margin-left: 20px;
 
     font-size: 25px;
-    color: rgb(3, 2, 51);
-    background-color: rgb(29, 207, 6);
+    color: rgb(255, 255, 255);
+    background-color: rgb(16, 92, 6);
+    align-self: center;
+    padding: 5px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.navList div{
+    margin-right: 20px;
+    margin-left: 20px;
+
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(16, 92, 6);
     align-self: center;
     padding: 5px;
     border-radius: 7px;
@@ -59,6 +72,8 @@
     height: 30px;
 
 }
+
+
 
 .dropdownItems{
     width: 100%;

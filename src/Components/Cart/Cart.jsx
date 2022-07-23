@@ -4,7 +4,6 @@ import { useContext } from "react";
 
 export default function Cart(){
     const {cart, onAddCart } = useContext(CartContext)
-    console.log(cart)
 
     
     return(

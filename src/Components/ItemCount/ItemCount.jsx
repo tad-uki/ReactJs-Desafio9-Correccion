@@ -3,9 +3,8 @@ import React from "react";
 import { useState } from "react";
 import "./ItemCount.css"
 
-export default function ItemCount({ stock, initial, onAdd, id }){
+export default function ItemCount({ stock, initial, onAdd }){
     const [count, setCount] = useState(initial)
-    const [clicked, setClicked] = useState(false)
 
     function add(){
         setCount(count + 1)
@@ -15,9 +14,6 @@ export default function ItemCount({ stock, initial, onAdd, id }){
         setCount(count - 1)
     }
 
-    function onClicked(){
-        onAdd(count, id)
-    }
 
     return(
         <main>
@@ -32,7 +28,7 @@ export default function ItemCount({ stock, initial, onAdd, id }){
             </section>
 
             <section className="finishSection">
-                <button className="buttonFinish" onClick={onClicked}> Agregar al Carrito </button>
+                <button className="buttonFinish" onClick={()=> onAdd(count)}> Agregar al Carrito </button>
             </section>
             
         </main>
